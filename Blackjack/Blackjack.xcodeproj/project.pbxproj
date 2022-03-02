@@ -14,6 +14,7 @@
 		4D79463427CF58870055A9DE /* BlackjackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79463327CF58870055A9DE /* BlackjackTests.swift */; };
 		4D79463E27CF58870055A9DE /* BlackjackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79463D27CF58870055A9DE /* BlackjackUITests.swift */; };
 		4D79464027CF58870055A9DE /* BlackjackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79463F27CF58870055A9DE /* BlackjackUITestsLaunchTests.swift */; };
+		4D79464D27CF58DB0055A9DE /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79464C27CF58DB0055A9DE /* Cards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		4D79463927CF58870055A9DE /* BlackjackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackjackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D79463D27CF58870055A9DE /* BlackjackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackUITests.swift; sourceTree = "<group>"; };
 		4D79463F27CF58870055A9DE /* BlackjackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4D79464C27CF58DB0055A9DE /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				4D79462427CF58870055A9DE /* ContentView.swift */,
 				4D79462627CF58870055A9DE /* Assets.xcassets */,
 				4D79462827CF58870055A9DE /* Preview Content */,
+				4D79464C27CF58DB0055A9DE /* Cards.swift */,
 			);
 			path = Blackjack;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D79464D27CF58DB0055A9DE /* Cards.swift in Sources */,
 				4D79462527CF58870055A9DE /* ContentView.swift in Sources */,
 				4D79462327CF58870055A9DE /* BlackjackApp.swift in Sources */,
 			);
