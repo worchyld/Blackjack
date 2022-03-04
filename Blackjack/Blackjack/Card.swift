@@ -18,9 +18,24 @@ struct Card {
     enum Rank : Int {
         case two = 2, three, four, five, six, seven, eight, nine, ten
         case jack, queen, king, ace
-        
+                    
         struct Values {
             let first: Int, second : Int?
+        }
+        
+        var stringValue: String {
+            switch self {
+            case .two, .three, .four, .five, .six, .seven,.eight,.nine,.ten:
+                return String(self.rawValue)
+            case .ace:
+                return "ace"
+            case .jack:
+                return "j"
+            case .queen:
+                return "q"
+            case .king:
+                return "k"
+            }
         }
         
         var values: Values {
