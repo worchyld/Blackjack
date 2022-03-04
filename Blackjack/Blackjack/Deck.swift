@@ -12,6 +12,7 @@ import GameplayKit
 class Deck {
     var cards: [Card] = [Card]()
     
+    // prepare the deck, fill to 52 cards in an unshuffled state
     func prepare() {
         let ranks = [Card.Rank.ace, Card.Rank.two, Card.Rank.three, Card.Rank.four, Card.Rank.five, Card.Rank.six, Card.Rank.seven, Card.Rank.eight, Card.Rank.nine, Card.Rank.ten, Card.Rank.jack, Card.Rank.queen, Card.Rank.king]
         let suits = [Card.Suit.spades, Card.Suit.clubs, Card.Suit.diamonds, Card.Suit.hearts]
