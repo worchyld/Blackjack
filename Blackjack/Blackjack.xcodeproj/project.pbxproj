@@ -113,9 +113,9 @@
 				4D79462627CF58870055A9DE /* Assets.xcassets */,
 				4D79462827CF58870055A9DE /* Preview Content */,
 				4D79464C27CF58DB0055A9DE /* Card.swift */,
+				4DE067C527D15BC300969513 /* Deck.swift */,
 				4D79464E27CF59240055A9DE /* Player.swift */,
 				4D79465027CF59570055A9DE /* Dealer.swift */,
-				4DE067C527D15BC300969513 /* Deck.swift */,
 				4D79465227CF596C0055A9DE /* Decision.swift */,
 				4D79465427CF5A680055A9DE /* BlackjackGame.swift */,
 			);
