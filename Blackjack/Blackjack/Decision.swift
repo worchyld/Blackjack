@@ -1,5 +1,5 @@
 //
-//  Decisions.swift
+//  Decision.swift
 //  Blackjack
 //
 //  Created by Amarjit on 02/03/2022.
@@ -11,7 +11,7 @@ import Foundation
 // taken from: https://en.wikipedia.org/wiki/Blackjack
 // only implementing basics
 
-class Decisions {
+class Decision {
     // take another card
     func hit() {
         
