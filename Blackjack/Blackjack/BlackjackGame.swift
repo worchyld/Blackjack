@@ -7,21 +7,28 @@
 
 import Foundation
 
+enum GameState {
+    case newHand, deal, playerTurn, dealerTurn
+}
+
+enum GameResult {
+    case playerBlackjack, playerBust, playerWins, dealer21, dealerBusts, dealerWins
+}
+
 class BlackjackGame {
     var pot : Int = 0
     var currentBet : Int = 0
     var doubleDown : Bool = false
     var deck: Deck = Deck()
-    enum GameState : Int {
-        case reset = 1, deal, player, dealer
+    
+    init() {
+        reset()
     }
-    var gameState: GameState = .reset
     
     func reset() {
         self.pot = 0
         self.currentBet = 0
         self.doubleDown = false
-        // reset deck?
     }
      
 }
