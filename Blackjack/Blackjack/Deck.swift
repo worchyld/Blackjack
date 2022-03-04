@@ -37,3 +37,13 @@ class Deck {
     }
     
 }
+
+extension Deck : CustomStringConvertible {
+    var description: String {
+        var output: String = ""
+        for card in self.cards {
+            output.append("Card: \(card.description)\n")
+        }
+        return output
+    }
+}

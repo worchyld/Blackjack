@@ -16,6 +16,7 @@ class CardTests: XCTestCase {
         deck.prepare()
         
         XCTAssertTrue(deck.cards.count == 52)
+        NSLog(deck.description + "\n")
     }
     
     func testAceValueIs1Or11() {
