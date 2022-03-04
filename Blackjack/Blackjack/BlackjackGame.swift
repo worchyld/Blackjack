@@ -11,7 +11,7 @@ class BlackjackGame {
     var pot : Int = 0
     var currentBet : Int = 0
     var doubleDown : Bool = false
-    var deck: [Card] = [Card]()
+    var deck: Deck = Deck()
     enum GameState : Int {
         case reset = 1, deal, player, dealer
     }
@@ -21,7 +21,7 @@ class BlackjackGame {
         self.pot = 0
         self.currentBet = 0
         self.doubleDown = false
-        self.deck = [Card]()
+        // reset deck?
     }
      
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 class Dealer {
-
+    var cards: [Card] = [Card]()
 }

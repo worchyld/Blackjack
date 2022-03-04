@@ -9,4 +9,5 @@ import Foundation
 
 class Player {
     var cash: Int = 0
+    var cards: [Card] = [Card]()
 }

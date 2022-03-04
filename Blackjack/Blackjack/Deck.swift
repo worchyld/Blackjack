@@ -31,7 +31,9 @@ class Deck {
         return nil // TBC
     }
     
-    func shuffle() -> [Card] {
-        return self.cards.shuffled()
+    // shuffle deck
+    func shuffle() {
+        self.cards.shuffle()
     }
+    
 }
