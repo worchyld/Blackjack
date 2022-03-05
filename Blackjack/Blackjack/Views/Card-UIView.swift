@@ -11,7 +11,18 @@ struct Card_UIView: View {
     let card = Card.init(rank: .queen, suit: .clubs)
     
     var body: some View {
-        VStack {
+        HStack {
+            VStack {
+                Image("clubs-10").resizable()
+            }.frame(width: 85, height: 135, alignment: .center)
+            VStack {
+                Image("clubs-9").resizable()
+            }.frame(width: 85, height: 135, alignment: .center)
+        }
+        
+        
+        /*
+        
             ZStack {
                 RoundedRectangle(cornerRadius: 8.0).foregroundColor(.white).shadow(color: .gray, radius: 5.0, x: 5.0, y: 5.0)
                 
@@ -22,6 +33,7 @@ struct Card_UIView: View {
                 }
             }
         }.frame(width: 85, height: 135, alignment: .center)
+         */
     }
 }
 
