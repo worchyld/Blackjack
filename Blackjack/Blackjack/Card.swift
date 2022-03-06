@@ -23,21 +23,6 @@ struct Card {
             let first: Int, second : Int?
         }
         
-        var stringValue: String {
-            switch self {
-            case .two, .three, .four, .five, .six, .seven,.eight,.nine,.ten:
-                return String(self.rawValue)
-            case .ace:
-                return "ace"
-            case .jack:
-                return "j"
-            case .queen:
-                return "q"
-            case .king:
-                return "k"
-            }
-        }
-        
         var values: Values {
             switch self {
             case .ace:
@@ -53,9 +38,45 @@ struct Card {
     let rank: Rank, suit : Suit
 }
 
+//
+// Card description extensions
+//
+
+extension Card.Suit : CustomStringConvertible {
+    // map the output back to the key
+    // there's probably a better way to do this
+    var description: String {
+        switch String(self.rawValue) {
+        case "♠": return "spades"
+        case "♡": return "hearts"
+        case "♢": return "diamonds"
+        case "♣": return "clubs"
+        default:
+            return ""
+        }
+    }
+}
+
+extension Card.Rank : CustomStringConvertible {
+    var description: String {
+        switch self {
+        case .two, .three, .four, .five, .six, .seven,.eight,.nine,.ten:
+            return String(self.rawValue)
+        case .ace:
+            return "ace"
+        case .jack:
+            return "j"
+        case .queen:
+            return "q"
+        case .king:
+            return "k"
+        }
+    }
+}
+
 extension Card : CustomStringConvertible {
     var description: String {
-        var output = "suit is \(suit.rawValue),"
+        var output = "\(suit.description) \n suit is \(suit.rawValue),"
                 output += " value is \(rank.values.first)"
                 if let second = rank.values.second {
                     output += " or \(second)"
@@ -63,3 +84,4 @@ extension Card : CustomStringConvertible {
         return output
     }
 }
+

@@ -19,6 +19,13 @@ class CardTests: XCTestCase {
         NSLog(deck.description + "\n")
     }
     
+    func testDeckIsShuffled() {
+        let deck = Deck()
+        deck.prepare()
+        deck.shuffle()
+        print(deck.description)
+    }
+    
     func testAceValueIs1Or11() {
         let ace = Card(rank: .ace, suit: .clubs)
         XCTAssertTrue(ace.rank.values.first == 1 || ace.rank.values.second == 11)
@@ -33,6 +40,25 @@ class CardTests: XCTestCase {
         XCTAssertTrue(jack.rank.values.first == 10)
         XCTAssertTrue(queen.rank.values.first == 10)
         XCTAssertTrue(king.rank.values.first == 10)
+    }
+    
+    func testCardSuitNames() {
+        let jackDiamonds = Card(rank: .jack, suit: .diamonds).suit.description
+        let jackHearts = Card(rank: .jack, suit: .hearts).suit.description
+        let jackClubs = Card(rank: .jack, suit: .clubs).suit.description
+        let jackSpades = Card(rank: .jack, suit: .spades).suit.description
+        
+        XCTAssertEqual(jackDiamonds, "diamonds")
+        XCTAssertEqual(jackHearts, "hearts")
+        XCTAssertEqual(jackClubs, "clubs")
+        XCTAssertEqual(jackSpades, "spades")
+    }
+    
+    func testCardRankName() {
+        let jack = Card(rank: .jack, suit: .clubs)
+        let rankName = jack.rank.description
+        
+        XCTAssertEqual(rankName, "j")
     }
 
 }
