@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D193C6027D493DF00BDFCD4 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D193C5F27D493DF00BDFCD4 /* ScoreView.swift */; };
 		4D5EB63127D022A200D0EF1A /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EB63027D022A200D0EF1A /* CardTests.swift */; };
 		4D79462327CF58870055A9DE /* BlackjackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79462227CF58870055A9DE /* BlackjackApp.swift */; };
 		4D79462527CF58870055A9DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79462427CF58870055A9DE /* ContentView.swift */; };
@@ -20,7 +21,7 @@
 		4D79465127CF59570055A9DE /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79465027CF59570055A9DE /* Dealer.swift */; };
 		4D79465327CF596C0055A9DE /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79465227CF596C0055A9DE /* Decision.swift */; };
 		4D79465527CF5A680055A9DE /* BlackjackGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79465427CF5A680055A9DE /* BlackjackGame.swift */; };
-		4D9CB52A27D23E6F00D98219 /* Card-UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CB52927D23E6F00D98219 /* Card-UIView.swift */; };
+		4D9CB52A27D23E6F00D98219 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CB52927D23E6F00D98219 /* CardView.swift */; };
 		4DE067C627D15BC300969513 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE067C527D15BC300969513 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D193C5F27D493DF00BDFCD4 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		4D5EB63027D022A200D0EF1A /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		4D79461F27CF58870055A9DE /* Blackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D79462227CF58870055A9DE /* BlackjackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackApp.swift; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		4D79465027CF59570055A9DE /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 		4D79465227CF596C0055A9DE /* Decision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
 		4D79465427CF5A680055A9DE /* BlackjackGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGame.swift; sourceTree = "<group>"; };
-		4D9CB52927D23E6F00D98219 /* Card-UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Card-UIView.swift"; sourceTree = "<group>"; };
+		4D9CB52927D23E6F00D98219 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4DE067C527D15BC300969513 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,7 +156,8 @@
 		4D9CB52B27D23F1100D98219 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D9CB52927D23E6F00D98219 /* Card-UIView.swift */,
+				4D9CB52927D23E6F00D98219 /* CardView.swift */,
+				4D193C5F27D493DF00BDFCD4 /* ScoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,7 +300,8 @@
 				4D79465327CF596C0055A9DE /* Decision.swift in Sources */,
 				4D79465127CF59570055A9DE /* Dealer.swift in Sources */,
 				4D79462327CF58870055A9DE /* BlackjackApp.swift in Sources */,
-				4D9CB52A27D23E6F00D98219 /* Card-UIView.swift in Sources */,
+				4D9CB52A27D23E6F00D98219 /* CardView.swift in Sources */,
+				4D193C6027D493DF00BDFCD4 /* ScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

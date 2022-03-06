@@ -15,6 +15,14 @@ enum GameResult {
     case playerBlackjack, playerBust, playerWins, dealer21, dealerBusts, dealerWins
 }
 
+protocol GameStateDelegate {
+    func gameStateChanged(to: GameState)
+    func dealerScoreChanged(score: Int)
+    func playerScoreChanged(score: Int)
+    func playerBalanceChanged(newBalance: Int)
+    func gameOver()
+}
+
 class BlackjackGame {
     var pot : Int = 0
     var currentBet : Int = 0
