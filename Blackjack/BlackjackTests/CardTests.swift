@@ -67,10 +67,10 @@ class CardTests: XCTestCase {
         let card3 = Card(rank: .three, suit: .diamonds) //3
         let card4 = Card(rank: .four, suit: .diamonds) //4
         
-        let cards = [card1, card2, card3, card4]
+        let hand = [card1, card2, card3, card4]
         
         var total = 0
-        for card in cards {
+        for card in hand {
             let values = card.value
             if (values.second == nil) {
                 total += values.first
