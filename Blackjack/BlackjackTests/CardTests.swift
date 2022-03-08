@@ -60,5 +60,27 @@ class CardTests: XCTestCase {
         
         XCTAssertEqual(rankName, "j")
     }
+    
+    func testSumOfCardsEquals21() {
+        let card1 = Card(rank: .jack, suit: .diamonds) //10
+        let card2 = Card(rank: .four, suit: .diamonds) //4
+        let card3 = Card(rank: .three, suit: .diamonds) //3
+        let card4 = Card(rank: .four, suit: .diamonds) //4
+        
+        let cards = [card1, card2, card3, card4]
+        
+        var total = 0
+        for card in cards {
+            let values = card.value
+            if (values.second == nil) {
+                total += values.first
+            } else {
+                let secondValue = values.second!
+                total += secondValue
+            }
+        }
+        
+        XCTAssertEqual(total, 21)
+    }
 
 }

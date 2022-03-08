@@ -36,6 +36,10 @@ struct Card {
     }
     
     let rank: Rank, suit : Suit
+    
+    var value : Rank.Values {
+        return self.rank.values
+    }
 }
 
 //
