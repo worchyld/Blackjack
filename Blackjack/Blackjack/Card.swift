@@ -14,6 +14,13 @@ struct Card {
         case spades = "♠", hearts = "♡", diamonds = "♢", clubs = "♣"
     }
     
+    enum Rank: CaseIterable {
+      case two, three, four, five, six, seven, eight, nine, ten
+      case jack, queen, king
+      case ace
+    }
+    
+    /*
     // Rank enumerated
     enum Rank : Int {
         case two = 2, three, four, five, six, seven, eight, nine, ten
@@ -33,13 +40,10 @@ struct Card {
                 return Values(first: self.rawValue, second: nil)
             }
         }
-    }
+    }*/
     
     let rank: Rank, suit : Suit
     
-    var value : Rank.Values {
-        return self.rank.values
-    }
 }
 
 //
@@ -63,6 +67,8 @@ extension Card.Suit : CustomStringConvertible {
 
 extension Card.Rank : CustomStringConvertible {
     var description: String {
+        return ""
+        /*
         switch self {
         case .two, .three, .four, .five, .six, .seven,.eight,.nine,.ten:
             return String(self.rawValue)
@@ -74,17 +80,17 @@ extension Card.Rank : CustomStringConvertible {
             return "q"
         case .king:
             return "k"
-        }
+        }*/
     }
 }
 
 extension Card : CustomStringConvertible {
     var description: String {
-        var output = "\(suit.description) \n suit is \(suit.rawValue),"
-                output += " value is \(rank.values.first)"
-                if let second = rank.values.second {
-                    output += " or \(second)"
-                }
+        let output = "\(suit.description) \n suit is \(suit.rawValue),"
+                //output += " value is \(rank.values.first)"
+//                if let second = rank.values.second {
+//                    output += " or \(second)"
+//                }
         return output
     }
 }

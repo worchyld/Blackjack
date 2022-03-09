@@ -26,61 +26,62 @@ class CardTests: XCTestCase {
         print(deck.description)
     }
     
-    func testAceValueIs1Or11() {
-        let ace = Card(rank: .ace, suit: .clubs)
-        XCTAssertTrue(ace.rank.values.first == 1 || ace.rank.values.second == 11)
-        XCTAssertEqual(ace.suit, .clubs)
+    func testJackValueIs10() {
+        let card = Card(rank: .jack, suit: .clubs)
+        let hand = Hand(cards: [card])
+        let expected = 10
+        XCTAssertEqual(hand.score, expected)
     }
     
-    func testJackToKingValues() {
-        let jack = Card(rank: .jack, suit: .hearts)
-        let queen = Card(rank: .queen, suit: .hearts)
-        let king = Card(rank: .king, suit: .hearts)
-        
-        XCTAssertTrue(jack.rank.values.first == 10)
-        XCTAssertTrue(queen.rank.values.first == 10)
-        XCTAssertTrue(king.rank.values.first == 10)
+    func testQueenValueIs10() {
+        let card = Card(rank: .queen, suit: .clubs)
+        let hand = Hand(cards: [card])
+        let expected = 10
+        XCTAssertEqual(hand.score, expected)
     }
     
-    func testCardSuitNames() {
-        let jackDiamonds = Card(rank: .jack, suit: .diamonds).suit.description
-        let jackHearts = Card(rank: .jack, suit: .hearts).suit.description
-        let jackClubs = Card(rank: .jack, suit: .clubs).suit.description
-        let jackSpades = Card(rank: .jack, suit: .spades).suit.description
-        
-        XCTAssertEqual(jackDiamonds, "diamonds")
-        XCTAssertEqual(jackHearts, "hearts")
-        XCTAssertEqual(jackClubs, "clubs")
-        XCTAssertEqual(jackSpades, "spades")
+    func testKingValueIs10() {
+        let card = Card(rank: .jack, suit: .clubs)
+        let hand = Hand(cards: [card])
+        let expected = 10
+        XCTAssertEqual(hand.score, expected)
     }
     
-    func testCardRankName() {
-        let jack = Card(rank: .jack, suit: .clubs)
-        let rankName = jack.rank.description
+    func testNumericValue() {
+        let card = Card(rank: .two, suit: .clubs)
+        let hand = Hand(cards: [card])
+        let expected = 2
+        XCTAssertEqual(hand.score, expected)
+    }
+
+    func testCombinedHandValue() {
+        let fiveClubs = Card(rank: .five, suit: .clubs)
+        let fiveSpades = Card(rank: .five, suit: .spades)
+        let fourHearts = Card(rank: .four, suit: .hearts)
         
-        XCTAssertEqual(rankName, "j")
+        let hand = Hand(cards: [fiveClubs, fiveSpades, fourHearts])
+        
+        let expected = 14
+        XCTAssertEqual(hand.score, expected)
     }
     
-    func testSumOfCardsEquals21() {
-        let card1 = Card(rank: .jack, suit: .diamonds) //10
-        let card2 = Card(rank: .four, suit: .diamonds) //4
-        let card3 = Card(rank: .three, suit: .diamonds) //3
-        let card4 = Card(rank: .four, suit: .diamonds) //4
+    func testAceIsHighValue() {
+        let card = Card(rank: .ace, suit: .clubs)
+        let hand = Hand(cards: [card])
+        let expected = 11
+        XCTAssertEqual(hand.score, expected)
+    }
+    
+    
+    func testAcesIsLowValue() {
+        let cardTen = Card(rank: .ten, suit: .clubs)
+        let cardSeven = Card(rank: .seven, suit: .clubs)
+        let cardThree = Card(rank: .three, suit: .clubs)
+        let cardAce = Card(rank: .ace, suit: .clubs)
         
-        let hand = [card1, card2, card3, card4]
-        
-        var total = 0
-        for card in hand {
-            let values = card.value
-            if (values.second == nil) {
-                total += values.first
-            } else {
-                let secondValue = values.second!
-                total += secondValue
-            }
-        }
-        
-        XCTAssertEqual(total, 21)
+        let hand = Hand(cards: [cardTen, cardSeven, cardThree, cardAce])
+        let expected = (10+7+3+1)
+        XCTAssertEqual(hand.score, expected)
     }
 
 }
