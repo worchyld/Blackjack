@@ -10,37 +10,15 @@ import Foundation
 struct Card {
     
     // Suit enumerated
-    enum Suit : Character {
+    enum Suit: Character {
         case spades = "♠", hearts = "♡", diamonds = "♢", clubs = "♣"
     }
     
-    enum Rank: CaseIterable {
-      case two, three, four, five, six, seven, eight, nine, ten
+    enum Rank: Int, CaseIterable {
+      case two = 2, three, four, five, six, seven, eight, nine, ten
       case jack, queen, king
       case ace
     }
-    
-    /*
-    // Rank enumerated
-    enum Rank : Int {
-        case two = 2, three, four, five, six, seven, eight, nine, ten
-        case jack, queen, king, ace
-                    
-        struct Values {
-            let first: Int, second : Int?
-        }
-        
-        var values: Values {
-            switch self {
-            case .ace:
-                return Values(first: 1, second: 11)
-            case .jack, .queen, .king:
-                return Values(first: 10, second: nil)
-            default:
-                return Values(first: self.rawValue, second: nil)
-            }
-        }
-    }*/
     
     let rank: Rank, suit : Suit
     
@@ -67,11 +45,10 @@ extension Card.Suit : CustomStringConvertible {
 
 extension Card.Rank : CustomStringConvertible {
     var description: String {
-        return ""
-        /*
+        
         switch self {
         case .two, .three, .four, .five, .six, .seven,.eight,.nine,.ten:
-            return String(self.rawValue)
+            return String(self.hashValue)
         case .ace:
             return "ace"
         case .jack:
@@ -80,17 +57,13 @@ extension Card.Rank : CustomStringConvertible {
             return "q"
         case .king:
             return "k"
-        }*/
+        }
     }
 }
 
 extension Card : CustomStringConvertible {
     var description: String {
-        let output = "\(suit.description) \n suit is \(suit.rawValue),"
-                //output += " value is \(rank.values.first)"
-//                if let second = rank.values.second {
-//                    output += " or \(second)"
-//                }
+        let output = "\(suit.description) \n  suit is \(suit.rawValue)\n"
         return output
     }
 }

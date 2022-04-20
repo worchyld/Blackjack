@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct ScoreView: View {
+    @State var score: Double = 0
+    
     var body: some View {
-        HStack {
-            Spacer()
-            Text("Score: 0").multilineTextAlignment(.trailing).padding(.trailing, 25.0)
+        HStack() {
+            Color.clear
+                .animatingOverlay(for: score)
+                .font(.largeTitle)
         }
     }
 }
 
 struct ScoreView_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreView()
+        ScoreView(score: 100)
     }
 }
