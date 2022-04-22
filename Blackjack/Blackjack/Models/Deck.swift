@@ -8,8 +8,18 @@
 import Foundation
 import GameplayKit
 
+protocol DeckDelegate {
+    func prepare()
+    func shuffle()
+    func drawExactlyOneCard() -> Card?
+    func removeCard()
+    var deckSize: Int { get set }
+    var cards: [Card] { get set }
+}
+
 // Deck
-class Deck {
+class Deck : DeckDelegate {
+    var deckSize: Int = 0
     var cards: [Card] = [Card]()
     
     // prepare the deck, fill to 52 cards in an unshuffled state
@@ -37,6 +47,9 @@ class Deck {
         self.cards.shuffle()
     }
     
+    // remove card
+    func removeCard() {
+    }
 }
 
 extension Deck : CustomStringConvertible {
