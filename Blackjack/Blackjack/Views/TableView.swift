@@ -9,7 +9,26 @@ import SwiftUI
 
 struct TableView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            HStack(alignment: .center, spacing: 20) {
+                Text("Score: 0")
+                Button {
+                } label: {
+                    Text("Menu")
+                }
+            }
+        
+            HStack(alignment: .center, spacing: 20) {
+                Button {
+                } label: {
+                    Text("Hit")
+                }
+                Button {
+                } label: {
+                    Text("Stand")
+                }
+            }
+        }
     }
 }
 
