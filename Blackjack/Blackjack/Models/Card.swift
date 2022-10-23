@@ -8,7 +8,6 @@
 import Foundation
 
 struct Card {
-    
     // Suit enumerated
     enum Suit: Character {
         case spades = "♠", hearts = "♡", diamonds = "♢", clubs = "♣"
@@ -21,7 +20,6 @@ struct Card {
     }
     
     let rank: Rank, suit : Suit
-    
 }
 
 //

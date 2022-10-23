@@ -110,9 +110,9 @@
 		4D32A6472812537700B465A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4D79464C27CF58DB0055A9DE /* Card.swift */,
 				4D58452727D87828006B856A /* Hand.swift */,
 				4DE067C527D15BC300969513 /* Deck.swift */,
+				4D79464C27CF58DB0055A9DE /* Card.swift */,
 				4D79464E27CF59240055A9DE /* Player.swift */,
 				4D79465027CF59570055A9DE /* Dealer.swift */,
 				4D79465227CF596C0055A9DE /* Decision.swift */,
