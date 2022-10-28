@@ -18,6 +18,7 @@
 		4D61CCBB280FB04B00EADF0F /* Ext+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61CCBA280FB04B00EADF0F /* Ext+View.swift */; };
 		4D61CCBD280FB06E00EADF0F /* AnimatedNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61CCBC280FB06E00EADF0F /* AnimatedNumberModifier.swift */; };
 		4D61CCBF280FB5FD00EADF0F /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61CCBE280FB5FD00EADF0F /* AvatarView.swift */; };
+		4D6413C8290C41C4000F8876 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6413C7290C41C4000F8876 /* Colours.swift */; };
 		4D79462327CF58870055A9DE /* BlackjackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79462227CF58870055A9DE /* BlackjackApp.swift */; };
 		4D79462527CF58870055A9DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79462427CF58870055A9DE /* ContentView.swift */; };
 		4D79462727CF58870055A9DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D79462627CF58870055A9DE /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		4D61CCBA280FB04B00EADF0F /* Ext+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+View.swift"; sourceTree = "<group>"; };
 		4D61CCBC280FB06E00EADF0F /* AnimatedNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedNumberModifier.swift; sourceTree = "<group>"; };
 		4D61CCBE280FB5FD00EADF0F /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		4D6413C7290C41C4000F8876 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		4D79461F27CF58870055A9DE /* Blackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D79462227CF58870055A9DE /* BlackjackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackApp.swift; sourceTree = "<group>"; };
 		4D79462427CF58870055A9DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				4D58452927D87864006B856A /* Ext+CaseIterable.swift */,
 				4D58452B27D8787B006B856A /* Ext+Optional.swift */,
 				4D61CCBA280FB04B00EADF0F /* Ext+View.swift */,
+				4D6413C7290C41C4000F8876 /* Colours.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				4DE067C627D15BC300969513 /* Deck.swift in Sources */,
 				4D61CCBB280FB04B00EADF0F /* Ext+View.swift in Sources */,
 				4D79465327CF596C0055A9DE /* Decision.swift in Sources */,
+				4D6413C8290C41C4000F8876 /* Colours.swift in Sources */,
 				4D79465127CF59570055A9DE /* Dealer.swift in Sources */,
 				4D79462327CF58870055A9DE /* BlackjackApp.swift in Sources */,
 				4D58452A27D87864006B856A /* Ext+CaseIterable.swift in Sources */,
