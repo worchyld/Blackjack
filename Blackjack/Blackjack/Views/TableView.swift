@@ -14,8 +14,6 @@ struct TableView: View {
             .ignoresSafeArea(.all) // Ignore just for the color
                .overlay(
                    VStack(spacing: 20) {
-                       //Text("Overlay").font(.largeTitle)
-                       //Text("Example").font(.title).foregroundColor(.white)
                        HStack(alignment: .center, spacing: 20) {
                            Text("Score: 0")
                            Button {

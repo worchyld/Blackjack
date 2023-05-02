@@ -9,7 +9,7 @@ import Foundation
 
 struct Card {
     // Suit enumerated
-    enum Suit: Character {
+    enum Suit: Character, CaseIterable {
         case spades = "♠", hearts = "♡", diamonds = "♢", clubs = "♣"
     }
     
