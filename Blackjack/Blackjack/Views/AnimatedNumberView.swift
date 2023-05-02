@@ -11,27 +11,25 @@ import SwiftUI
 
 struct AnimatedNumberView: View {
     @State private var number: Double = 0
+    @State var target: Double = 0
 
     var body: some View {
         VStack(spacing: 20) {
             Color.clear
                 .frame(width: 50, height: 50)
                 .animatingOverlay(for: number)
-            
-            
-            Button {
-                withAnimation {
-                    number = .random(in: 0 ..< 200)
-                }
-            } label: {
-                Text("Create random number")
+        }
+        .onAppear() {
+            withAnimation {
+                number = target
             }
         }
     }
+        
 }
 
 struct AnimatedNumberView_Previews: PreviewProvider {
     static var previews: some View {
-        AnimatedNumberView()
+        AnimatedNumberView(target: 100)
     }
 }
