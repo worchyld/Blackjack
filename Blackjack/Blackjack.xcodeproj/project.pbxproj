@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D32A6442812533700B465A3 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32A6432812533700B465A3 /* TableView.swift */; };
-		4D32A6462812535F00B465A3 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D32A6452812535F00B465A3 /* MainMenuView.swift */; };
 		4D58452827D87828006B856A /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58452727D87828006B856A /* Hand.swift */; };
 		4D58452A27D87864006B856A /* Ext+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58452927D87864006B856A /* Ext+CaseIterable.swift */; };
 		4D58452C27D8787B006B856A /* Ext+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58452B27D8787B006B856A /* Ext+Optional.swift */; };
@@ -31,7 +29,6 @@
 		4D79465127CF59570055A9DE /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79465027CF59570055A9DE /* Dealer.swift */; };
 		4D79465327CF596C0055A9DE /* Decision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79465227CF596C0055A9DE /* Decision.swift */; };
 		4D79465527CF5A680055A9DE /* BlackjackGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79465427CF5A680055A9DE /* BlackjackGame.swift */; };
-		4D9CB52A27D23E6F00D98219 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CB52927D23E6F00D98219 /* CardView.swift */; };
 		4DE067C627D15BC300969513 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE067C527D15BC300969513 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +50,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D32A6432812533700B465A3 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
-		4D32A6452812535F00B465A3 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		4D58452727D87828006B856A /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		4D58452927D87864006B856A /* Ext+CaseIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+CaseIterable.swift"; sourceTree = "<group>"; };
 		4D58452B27D8787B006B856A /* Ext+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Optional.swift"; sourceTree = "<group>"; };
@@ -80,7 +75,6 @@
 		4D79465027CF59570055A9DE /* Dealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 		4D79465227CF596C0055A9DE /* Decision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decision.swift; sourceTree = "<group>"; };
 		4D79465427CF5A680055A9DE /* BlackjackGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGame.swift; sourceTree = "<group>"; };
-		4D9CB52927D23E6F00D98219 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4DE067C527D15BC300969513 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,13 +190,10 @@
 		4D9CB52B27D23F1100D98219 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D9CB52927D23E6F00D98219 /* CardView.swift */,
 				4D61CCBC280FB06E00EADF0F /* AnimatedNumberModifier.swift */,
 				4D61CCB8280FAF0900EADF0F /* AnimatedNumberView.swift */,
 				4D61CCBE280FB5FD00EADF0F /* AvatarView.swift */,
 				4D5C1DA72A0165C5001D3AD6 /* GameTableView.swift */,
-				4D32A6432812533700B465A3 /* TableView.swift */,
-				4D32A6452812535F00B465A3 /* MainMenuView.swift */,
 				4D79463227CF58870055A9DE /* BlackjackTests */,
 			);
 			path = Views;
@@ -338,7 +329,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D32A6462812535F00B465A3 /* MainMenuView.swift in Sources */,
 				4D61CCB9280FAF0900EADF0F /* AnimatedNumberView.swift in Sources */,
 				4D79465527CF5A680055A9DE /* BlackjackGame.swift in Sources */,
 				4D61CCBD280FB06E00EADF0F /* AnimatedNumberModifier.swift in Sources */,
@@ -354,8 +344,6 @@
 				4D79465127CF59570055A9DE /* Dealer.swift in Sources */,
 				4D79462327CF58870055A9DE /* BlackjackApp.swift in Sources */,
 				4D58452A27D87864006B856A /* Ext+CaseIterable.swift in Sources */,
-				4D32A6442812533700B465A3 /* TableView.swift in Sources */,
-				4D9CB52A27D23E6F00D98219 /* CardView.swift in Sources */,
 				4D58452C27D8787B006B856A /* Ext+Optional.swift in Sources */,
 				4D61CCBF280FB5FD00EADF0F /* AvatarView.swift in Sources */,
 			);
