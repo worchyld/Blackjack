@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainMenuView: View {
     var body: some View {
         VStack {
             Text("Simple BlackJack")
@@ -26,7 +26,7 @@ struct ContentView: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: 10).stroke(Color.white, lineWidth: 5)
                         )
-                }                
+                }
             }.padding(20)
             
         }
@@ -37,6 +37,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainMenuView()
     }
 }
