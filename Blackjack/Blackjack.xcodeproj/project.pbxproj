@@ -12,9 +12,6 @@
 		4D58452C27D8787B006B856A /* Ext+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58452B27D8787B006B856A /* Ext+Optional.swift */; };
 		4D5C1DA82A0165C5001D3AD6 /* GameTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C1DA72A0165C5001D3AD6 /* GameTableView.swift */; };
 		4D5EB63127D022A200D0EF1A /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EB63027D022A200D0EF1A /* CardTests.swift */; };
-		4D61CCB9280FAF0900EADF0F /* AnimatedNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61CCB8280FAF0900EADF0F /* AnimatedNumberView.swift */; };
-		4D61CCBB280FB04B00EADF0F /* Ext+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61CCBA280FB04B00EADF0F /* Ext+View.swift */; };
-		4D61CCBD280FB06E00EADF0F /* AnimatedNumberModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61CCBC280FB06E00EADF0F /* AnimatedNumberModifier.swift */; };
 		4D61CCBF280FB5FD00EADF0F /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61CCBE280FB5FD00EADF0F /* AvatarView.swift */; };
 		4D6413C8290C41C4000F8876 /* Colours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6413C7290C41C4000F8876 /* Colours.swift */; };
 		4D79462327CF58870055A9DE /* BlackjackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79462227CF58870055A9DE /* BlackjackApp.swift */; };
@@ -55,9 +52,6 @@
 		4D58452B27D8787B006B856A /* Ext+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Optional.swift"; sourceTree = "<group>"; };
 		4D5C1DA72A0165C5001D3AD6 /* GameTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableView.swift; sourceTree = "<group>"; };
 		4D5EB63027D022A200D0EF1A /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
-		4D61CCB8280FAF0900EADF0F /* AnimatedNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedNumberView.swift; sourceTree = "<group>"; };
-		4D61CCBA280FB04B00EADF0F /* Ext+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+View.swift"; sourceTree = "<group>"; };
-		4D61CCBC280FB06E00EADF0F /* AnimatedNumberModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedNumberModifier.swift; sourceTree = "<group>"; };
 		4D61CCBE280FB5FD00EADF0F /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		4D6413C7290C41C4000F8876 /* Colours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colours.swift; sourceTree = "<group>"; };
 		4D79461F27CF58870055A9DE /* Blackjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blackjack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +116,6 @@
 			children = (
 				4D58452927D87864006B856A /* Ext+CaseIterable.swift */,
 				4D58452B27D8787B006B856A /* Ext+Optional.swift */,
-				4D61CCBA280FB04B00EADF0F /* Ext+View.swift */,
 				4D6413C7290C41C4000F8876 /* Colours.swift */,
 			);
 			path = Extensions;
@@ -190,8 +183,6 @@
 		4D9CB52B27D23F1100D98219 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D61CCBC280FB06E00EADF0F /* AnimatedNumberModifier.swift */,
-				4D61CCB8280FAF0900EADF0F /* AnimatedNumberView.swift */,
 				4D61CCBE280FB5FD00EADF0F /* AvatarView.swift */,
 				4D5C1DA72A0165C5001D3AD6 /* GameTableView.swift */,
 				4D79463227CF58870055A9DE /* BlackjackTests */,
@@ -329,15 +320,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D61CCB9280FAF0900EADF0F /* AnimatedNumberView.swift in Sources */,
 				4D79465527CF5A680055A9DE /* BlackjackGame.swift in Sources */,
-				4D61CCBD280FB06E00EADF0F /* AnimatedNumberModifier.swift in Sources */,
 				4D79464F27CF59240055A9DE /* Player.swift in Sources */,
 				4D79464D27CF58DB0055A9DE /* Card.swift in Sources */,
 				4D58452827D87828006B856A /* Hand.swift in Sources */,
 				4D79462527CF58870055A9DE /* ContentView.swift in Sources */,
 				4DE067C627D15BC300969513 /* Deck.swift in Sources */,
-				4D61CCBB280FB04B00EADF0F /* Ext+View.swift in Sources */,
 				4D79465327CF596C0055A9DE /* Decision.swift in Sources */,
 				4D5C1DA82A0165C5001D3AD6 /* GameTableView.swift in Sources */,
 				4D6413C8290C41C4000F8876 /* Colours.swift in Sources */,
