@@ -122,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				4D79462127CF58870055A9DE /* Blackjack */,
+				4D79463227CF58870055A9DE /* BlackjackTests */,
 				4D79463C27CF58870055A9DE /* BlackjackUITests */,
 				4D79462027CF58870055A9DE /* Products */,
 			);
@@ -183,7 +184,6 @@
 			children = (
 				4D61CCBE280FB5FD00EADF0F /* AvatarView.swift */,
 				4D5C1DA72A0165C5001D3AD6 /* GameTableView.swift */,
-				4D79463227CF58870055A9DE /* BlackjackTests */,
 			);
 			path = Views;
 			sourceTree = "<group>";
