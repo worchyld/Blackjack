@@ -24,16 +24,25 @@ protocol GameStateDelegate: AnyObject {
 
 class BlackjackGame {
     private var deck: Deck
+    
+    private var player: Player
+    private var dealer: Player
+    
     private var playerHand: [Card] = []
     private var dealerHand: [Card] = []
+    
+    private let initialCoins = 10
     private(set) var currentBet: Int = 0
     private(set) var pot: Int = 0
     private(set) var gameState: GameState = .idle
     
     weak var delegate: GameStateDelegate?
-    
+    weak var errorHandler: GameErrorHandler?
+
     init() {
-       self.deck = Deck()
+        self.deck = Deck()
+        self.player = Player(name: "Player 1", initialCoins: initialCoins)
+        self.dealer = Player(name: "Dealer", initialCoins: 0)
     }
     
     func newGame() {
@@ -48,6 +57,15 @@ class BlackjackGame {
     
     func placeBet(_ amount: Int) {
        // Implementation for placing a bet
+       do {
+            try player.placeBet(amount)
+            gameState = .playerTurn
+            delegate?.gameStateChanged(to: gameState)
+        } catch let error as GameError {
+            errorHandler?.handleError(error)
+        } catch {
+            errorHandler?.handleError(.invalidBet) // Default to invalidBet for unexpected errors
+        }
     }
 
     func deal() {

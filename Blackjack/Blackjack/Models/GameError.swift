@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol GameErrorHandler: AnyObject {
+    func handleError(_ error: GameError)
+}
+
 enum GameError: Error {
     case invalidBet
     case insufficientFunds
