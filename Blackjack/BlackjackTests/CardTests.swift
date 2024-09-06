@@ -11,7 +11,7 @@ import XCTest
 
 class CardTests: XCTestCase {
 
-    func testDeckIs52Cards() {
+    func testDeckIs52Cards() throws {
         let deck = Deck()
         deck.prepare()
         
@@ -19,42 +19,42 @@ class CardTests: XCTestCase {
         NSLog(deck.description + "\n")
     }
     
-    func testDeckIsShuffled() {
+    func testDeckIsShuffled() throws {
         let deck = Deck()
         deck.prepare()
         deck.shuffle()
         print(deck.description)
     }
     
-    func testJackValueIs10() {
+    func testJackValueIs10() throws {
         let card = Card(rank: .jack, suit: .clubs)
         let hand = Hand(cards: [card])
         let expected = 10
         XCTAssertEqual(hand.score, expected)
     }
     
-    func testQueenValueIs10() {
+    func testQueenValueIs10() throws {
         let card = Card(rank: .queen, suit: .clubs)
         let hand = Hand(cards: [card])
         let expected = 10
         XCTAssertEqual(hand.score, expected)
     }
     
-    func testKingValueIs10() {
+    func testKingValueIs10() throws {
         let card = Card(rank: .jack, suit: .clubs)
         let hand = Hand(cards: [card])
         let expected = 10
         XCTAssertEqual(hand.score, expected)
     }
     
-    func testNumericValue() {
+    func testNumericValue() throws {
         let card = Card(rank: .two, suit: .clubs)
         let hand = Hand(cards: [card])
         let expected = 2
         XCTAssertEqual(hand.score, expected)
     }
 
-    func testCombinedHandValue() {
+    func testCombinedHandValue() throws {
         let fiveClubs = Card(rank: .five, suit: .clubs)
         let fiveSpades = Card(rank: .five, suit: .spades)
         let fourHearts = Card(rank: .four, suit: .hearts)
@@ -65,7 +65,7 @@ class CardTests: XCTestCase {
         XCTAssertEqual(hand.score, expected)
     }
     
-    func testAceIsHighValue() {
+    func testAceIsHighValue() throws {
         let card = Card(rank: .ace, suit: .clubs)
         let hand = Hand(cards: [card])
         let expected = 11
@@ -73,7 +73,7 @@ class CardTests: XCTestCase {
     }
     
     
-    func testAcesIsLowValue() {
+    func testAcesIsLowValue() throws {
         let cardTen = Card(rank: .ten, suit: .clubs)
         let cardSeven = Card(rank: .seven, suit: .clubs)
         let cardThree = Card(rank: .three, suit: .clubs)
@@ -83,5 +83,4 @@ class CardTests: XCTestCase {
         let expected = (10+7+3+1)
         XCTAssertEqual(hand.score, expected)
     }
-
 }
