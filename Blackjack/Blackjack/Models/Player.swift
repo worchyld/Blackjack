@@ -2,27 +2,31 @@ import Foundation
 
 struct Player {
     var name: String
-    var cards: [Card]
+    var hand: [Card] = []
     var coins: Int
     var bet: Int
     
-    init(name: String = "Player 1", initialCoins: Int = 0) {
+    init(name: String, initialCoins: Int) {
         self.name = name
         self.coins = initialCoins
-        self.cards = []
+        self.hand = []
         self.bet = 0
     }
-    
+}
+
+extension Player {
     mutating func receiveCard(_ card: Card) {
-        cards.append(card)
+        hand.append(card)
     }
     
     mutating func clearHand() {
-        cards.removeAll()
+        hand.removeAll()
     }
-    
+}
+
+extension Player {    
     func calculateScore() -> Int {
-        let hand = Hand.init(cards: cards)
+        let hand = Hand(cards: self.hand)
         return hand.score
     }
 }

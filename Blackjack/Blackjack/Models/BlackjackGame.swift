@@ -8,7 +8,13 @@
 import Foundation
 
 enum GameState {
-    case idle, playerTurn, dealerTurn, gameOver
+    case idle
+    case betPlaced
+    case dealingInitialCards
+    case playerTurn
+    case dealerTurn
+    case evaluating
+    case gameOver
 }
 
 enum GameResult {
@@ -20,6 +26,7 @@ protocol GameStateDelegate: AnyObject {
     func dealerScoreChanged(score: Int)
     func playerScoreChanged(score: Int)
     func gameOver(result: GameResult)
+    func balanceChanged(newBalance: Int)
 }
 
 class BlackjackGame {
@@ -31,40 +38,50 @@ class BlackjackGame {
     private var playerHand: [Card] = []
     private var dealerHand: [Card] = []
     
-    private let initialCoins = 10
     private(set) var currentBet: Int = 0
     private(set) var pot: Int = 0
     private(set) var gameState: GameState = .idle
-    
+
+    private var playerBettingManager: BettingManager
+
     weak var delegate: GameStateDelegate?
     weak var errorHandler: GameErrorHandler?
 
-    init() {
+    init(playerName: String = "Player 1", initialCoins: Int = 10, payoutRules: PayoutRules = .standard) {
         self.deck = Deck()
         self.player = Player(name: "Player 1", initialCoins: initialCoins)
         self.dealer = Player(name: "Dealer", initialCoins: 0)
+        
+        self.playerBettingManager = BettingManager(initialCoins: initialCoins, payoutRules: payoutRules)
     }
     
+    // Implementation for starting a new game
     func newGame() {
-        // Implementation for starting a new game
         reset()
     }
 
+    // Implementation for shuffling the deck
     func shuffleDeck() {
-        // Implementation for shuffling the deck
         deck.shuffle()
     }
     
+    // Implementation for placing a bet
     func placeBet(_ amount: Int) {
-       // Implementation for placing a bet
-       do {
-            try player.placeBet(amount)
-            gameState = .playerTurn
+        guard gameState == .idle else {
+            errorHandler?.handleError(.invalidGameState)
+            return
+        }
+        do {
+            try playerBettingManager.placeBet(amount)
+            gameState = .betPlaced
             delegate?.gameStateChanged(to: gameState)
-        } catch let error as GameError {
-            errorHandler?.handleError(error)
+            delegate?.balanceChanged(newBalance: playerBettingManager.getAvailableCoins())
+        } catch BettingManager.BettingError.invalidBet {
+            errorHandler?.handleError(.invalidBet)
+        } catch BettingManager.BettingError.insufficientFunds {
+            errorHandler?.handleError(.insufficientFunds)
         } catch {
-            errorHandler?.handleError(.invalidBet) // Default to invalidBet for unexpected errors
+            errorHandler?.handleError(.invalidBet)
         }
     }
 
@@ -104,7 +121,7 @@ class BlackjackGame {
 }
     
 extension BlackjackGame {
-    func reset() {
+    private func reset() {
         currentBet = 0
         pot = 0
         gameState = .idle
