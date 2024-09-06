@@ -42,8 +42,7 @@ extension Card.Suit : CustomStringConvertible {
 }
 
 extension Card.Rank : CustomStringConvertible {
-    var description: String {
-        
+    var description: String {        
         switch self {
         case .two, .three, .four, .five, .six, .seven,.eight,.nine,.ten:
             return String(self.hashValue)

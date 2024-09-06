@@ -8,19 +8,15 @@
 import Foundation
 import GameplayKit
 
-protocol DeckDelegate {
-    func prepare()
-    func shuffle()
-    func drawExactlyOneCard() -> Card?
-    func removeCard()
-    var deckSize: Int { get set }
-    var cards: [Card] { get set }
-}
-
 // Deck
-class Deck : DeckDelegate {
-    var deckSize: Int = 0
-    var cards: [Card] = [Card]()
+class Deck {
+    private var _cards: [Card] = [Card]()
+    
+    var cards: [Card] {
+        get {
+            return self._cards
+        }
+    }
     
     // prepare the deck, fill to 52 cards in an unshuffled state
     func prepare() {
@@ -29,33 +25,21 @@ class Deck : DeckDelegate {
         
         for rank in ranks {
             for suit in suits {
-                cards.append(Card(rank: rank, suit: suit))
+                self._cards.append(Card(rank: rank, suit: suit))
             }
         }
     }
     
-    // draw 1 card from the deck
-    func drawExactlyOneCard() -> Card? {
-        guard !self.cards.isEmpty else {
-            return nil
-        }
-        return nil // TBC
-    }
-    
     // shuffle deck
     func shuffle() {
-        self.cards.shuffle()
-    }
-    
-    // remove card
-    func removeCard() {
+        self._cards.shuffle()
     }
 }
 
 extension Deck : CustomStringConvertible {
     var description: String {
         var output: String = ""
-        for card in self.cards {
+        for card in self._cards {
             output.append("Card: \(card.description)\n")
         }
         return output

@@ -27,7 +27,7 @@
 		4DB90AEC2C8B788100BE8276 /* poker-chip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB90AE92C8B788100BE8276 /* poker-chip.mp3 */; };
 		4DB90AED2C8B788100BE8276 /* shuffle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB90AEA2C8B788100BE8276 /* shuffle.mp3 */; };
 		4DB90AEE2C8B788100BE8276 /* shuffle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB90AEA2C8B788100BE8276 /* shuffle.mp3 */; };
-		4DE067C627D15BC300969513 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE067C527D15BC300969513 /* Deck.swift */; };
+		4DB90AF22C8B7D1400BE8276 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB90AF12C8B7D1400BE8276 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,7 @@
 		4D79465427CF5A680055A9DE /* BlackjackGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGame.swift; sourceTree = "<group>"; };
 		4DB90AE92C8B788100BE8276 /* poker-chip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "poker-chip.mp3"; sourceTree = "<group>"; };
 		4DB90AEA2C8B788100BE8276 /* shuffle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shuffle.mp3; sourceTree = "<group>"; };
-		4DE067C527D15BC300969513 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		4DB90AF12C8B7D1400BE8276 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				4D58452727D87828006B856A /* Hand.swift */,
-				4DE067C527D15BC300969513 /* Deck.swift */,
 				4D79464C27CF58DB0055A9DE /* Card.swift */,
+				4DB90AF12C8B7D1400BE8276 /* Deck.swift */,
 				4D79465427CF5A680055A9DE /* BlackjackGame.swift */,
 			);
 			path = Models;
@@ -335,12 +335,12 @@
 				4D79464D27CF58DB0055A9DE /* Card.swift in Sources */,
 				4D58452827D87828006B856A /* Hand.swift in Sources */,
 				4D79462527CF58870055A9DE /* MainMenuView.swift in Sources */,
-				4DE067C627D15BC300969513 /* Deck.swift in Sources */,
 				4D5C1DA82A0165C5001D3AD6 /* GameTableView.swift in Sources */,
 				4D6413C8290C41C4000F8876 /* Colours.swift in Sources */,
 				4D79462327CF58870055A9DE /* BlackjackApp.swift in Sources */,
 				4D58452A27D87864006B856A /* Ext+CaseIterable.swift in Sources */,
 				4D58452C27D8787B006B856A /* Ext+Optional.swift in Sources */,
+				4DB90AF22C8B7D1400BE8276 /* Deck.swift in Sources */,
 				4D61CCBF280FB5FD00EADF0F /* AvatarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,6 +574,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.silentflute.BlackjackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -594,6 +597,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.silentflute.BlackjackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -612,6 +618,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.silentflute.BlackjackUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -630,6 +639,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = uk.co.silentflute.BlackjackUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
