@@ -23,6 +23,10 @@
 		4D79464027CF58870055A9DE /* BlackjackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79463F27CF58870055A9DE /* BlackjackUITestsLaunchTests.swift */; };
 		4D79464D27CF58DB0055A9DE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79464C27CF58DB0055A9DE /* Card.swift */; };
 		4D79465527CF5A680055A9DE /* BlackjackGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79465427CF5A680055A9DE /* BlackjackGame.swift */; };
+		4DB90AEB2C8B788100BE8276 /* poker-chip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB90AE92C8B788100BE8276 /* poker-chip.mp3 */; };
+		4DB90AEC2C8B788100BE8276 /* poker-chip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB90AE92C8B788100BE8276 /* poker-chip.mp3 */; };
+		4DB90AED2C8B788100BE8276 /* shuffle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB90AEA2C8B788100BE8276 /* shuffle.mp3 */; };
+		4DB90AEE2C8B788100BE8276 /* shuffle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB90AEA2C8B788100BE8276 /* shuffle.mp3 */; };
 		4DE067C627D15BC300969513 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE067C527D15BC300969513 /* Deck.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +67,8 @@
 		4D79463F27CF58870055A9DE /* BlackjackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4D79464C27CF58DB0055A9DE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4D79465427CF5A680055A9DE /* BlackjackGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGame.swift; sourceTree = "<group>"; };
+		4DB90AE92C8B788100BE8276 /* poker-chip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "poker-chip.mp3"; sourceTree = "<group>"; };
+		4DB90AEA2C8B788100BE8276 /* shuffle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shuffle.mp3; sourceTree = "<group>"; };
 		4DE067C527D15BC300969513 /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +140,7 @@
 		4D79462127CF58870055A9DE /* Blackjack */ = {
 			isa = PBXGroup;
 			children = (
+				4DB90AEF2C8B788700BE8276 /* Sounds */,
 				4D79462227CF58870055A9DE /* BlackjackApp.swift */,
 				4D79462427CF58870055A9DE /* ContentView.swift */,
 				4D79462627CF58870055A9DE /* Assets.xcassets */,
@@ -179,6 +186,15 @@
 				4D79463227CF58870055A9DE /* BlackjackTests */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4DB90AEF2C8B788700BE8276 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				4DB90AE92C8B788100BE8276 /* poker-chip.mp3 */,
+				4DB90AEA2C8B788100BE8276 /* shuffle.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +302,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D79462A27CF58870055A9DE /* Preview Assets.xcassets in Resources */,
+				4DB90AEB2C8B788100BE8276 /* poker-chip.mp3 in Resources */,
+				4DB90AED2C8B788100BE8276 /* shuffle.mp3 in Resources */,
 				4D79462727CF58870055A9DE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +312,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB90AEE2C8B788100BE8276 /* shuffle.mp3 in Resources */,
+				4DB90AEC2C8B788100BE8276 /* poker-chip.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
