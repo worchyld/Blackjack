@@ -19,8 +19,6 @@
 		4D79462727CF58870055A9DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D79462627CF58870055A9DE /* Assets.xcassets */; };
 		4D79462A27CF58870055A9DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D79462927CF58870055A9DE /* Preview Assets.xcassets */; };
 		4D79463427CF58870055A9DE /* BlackjackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79463327CF58870055A9DE /* BlackjackTests.swift */; };
-		4D79463E27CF58870055A9DE /* BlackjackUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79463D27CF58870055A9DE /* BlackjackUITests.swift */; };
-		4D79464027CF58870055A9DE /* BlackjackUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79463F27CF58870055A9DE /* BlackjackUITestsLaunchTests.swift */; };
 		4D79464D27CF58DB0055A9DE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79464C27CF58DB0055A9DE /* Card.swift */; };
 		4D79465527CF5A680055A9DE /* BlackjackGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D79465427CF5A680055A9DE /* BlackjackGame.swift */; };
 		4DB90AEB2C8B788100BE8276 /* poker-chip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DB90AE92C8B788100BE8276 /* poker-chip.mp3 */; };
@@ -32,13 +30,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		4D79463027CF58870055A9DE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D79461727CF58870055A9DE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4D79461E27CF58870055A9DE;
-			remoteInfo = Blackjack;
-		};
-		4D79463A27CF58870055A9DE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D79461727CF58870055A9DE /* Project object */;
 			proxyType = 1;
@@ -62,9 +53,6 @@
 		4D79462927CF58870055A9DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D79462F27CF58870055A9DE /* BlackjackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackjackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D79463327CF58870055A9DE /* BlackjackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackTests.swift; sourceTree = "<group>"; };
-		4D79463927CF58870055A9DE /* BlackjackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackjackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D79463D27CF58870055A9DE /* BlackjackUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackUITests.swift; sourceTree = "<group>"; };
-		4D79463F27CF58870055A9DE /* BlackjackUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4D79464C27CF58DB0055A9DE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		4D79465427CF5A680055A9DE /* BlackjackGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGame.swift; sourceTree = "<group>"; };
 		4DB90AE92C8B788100BE8276 /* poker-chip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "poker-chip.mp3"; sourceTree = "<group>"; };
@@ -81,13 +69,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D79462C27CF58870055A9DE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4D79463627CF58870055A9DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -123,7 +104,6 @@
 			children = (
 				4D79462127CF58870055A9DE /* Blackjack */,
 				4D79463227CF58870055A9DE /* BlackjackTests */,
-				4D79463C27CF58870055A9DE /* BlackjackUITests */,
 				4D79462027CF58870055A9DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -133,7 +113,6 @@
 			children = (
 				4D79461F27CF58870055A9DE /* Blackjack.app */,
 				4D79462F27CF58870055A9DE /* BlackjackTests.xctest */,
-				4D79463927CF58870055A9DE /* BlackjackUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,15 +147,6 @@
 				4D5EB63027D022A200D0EF1A /* CardTests.swift */,
 			);
 			path = BlackjackTests;
-			sourceTree = "<group>";
-		};
-		4D79463C27CF58870055A9DE /* BlackjackUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4D79463D27CF58870055A9DE /* BlackjackUITests.swift */,
-				4D79463F27CF58870055A9DE /* BlackjackUITestsLaunchTests.swift */,
-			);
-			path = BlackjackUITests;
 			sourceTree = "<group>";
 		};
 		4D9CB52B27D23F1100D98219 /* Views */ = {
@@ -235,24 +205,6 @@
 			productReference = 4D79462F27CF58870055A9DE /* BlackjackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4D79463827CF58870055A9DE /* BlackjackUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4D79464927CF58870055A9DE /* Build configuration list for PBXNativeTarget "BlackjackUITests" */;
-			buildPhases = (
-				4D79463527CF58870055A9DE /* Sources */,
-				4D79463627CF58870055A9DE /* Frameworks */,
-				4D79463727CF58870055A9DE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4D79463B27CF58870055A9DE /* PBXTargetDependency */,
-			);
-			name = BlackjackUITests;
-			productName = BlackjackUITests;
-			productReference = 4D79463927CF58870055A9DE /* BlackjackUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -267,10 +219,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					4D79462E27CF58870055A9DE = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 4D79461E27CF58870055A9DE;
-					};
-					4D79463827CF58870055A9DE = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 4D79461E27CF58870055A9DE;
 					};
@@ -291,7 +239,6 @@
 			targets = (
 				4D79461E27CF58870055A9DE /* Blackjack */,
 				4D79462E27CF58870055A9DE /* BlackjackTests */,
-				4D79463827CF58870055A9DE /* BlackjackUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -314,13 +261,6 @@
 			files = (
 				4DB90AEE2C8B788100BE8276 /* shuffle.mp3 in Resources */,
 				4DB90AEC2C8B788100BE8276 /* poker-chip.mp3 in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4D79463727CF58870055A9DE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,15 +294,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4D79463527CF58870055A9DE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4D79463E27CF58870055A9DE /* BlackjackUITests.swift in Sources */,
-				4D79464027CF58870055A9DE /* BlackjackUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -370,11 +301,6 @@
 			isa = PBXTargetDependency;
 			target = 4D79461E27CF58870055A9DE /* Blackjack */;
 			targetProxy = 4D79463027CF58870055A9DE /* PBXContainerItemProxy */;
-		};
-		4D79463B27CF58870055A9DE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4D79461E27CF58870055A9DE /* Blackjack */;
-			targetProxy = 4D79463A27CF58870055A9DE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -607,48 +533,6 @@
 			};
 			name = Release;
 		};
-		4D79464A27CF58870055A9DE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A48R25Y4D5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.silentflute.BlackjackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Blackjack;
-			};
-			name = Debug;
-		};
-		4D79464B27CF58870055A9DE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A48R25Y4D5;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.silentflute.BlackjackUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Blackjack;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -675,15 +559,6 @@
 			buildConfigurations = (
 				4D79464727CF58870055A9DE /* Debug */,
 				4D79464827CF58870055A9DE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4D79464927CF58870055A9DE /* Build configuration list for PBXNativeTarget "BlackjackUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4D79464A27CF58870055A9DE /* Debug */,
-				4D79464B27CF58870055A9DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
