@@ -15,12 +15,72 @@ enum Chips: Int {
 }
 
 struct BetChipsView: View {
-    let coins: Int
+    @ObservedObject var bettingManager: BettingManager
+    var onSubmit: (Int) -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Coins: $\(bettingManager.coins)")
+            .font(.headline)
+            .padding()
+        
+        Text("Bet: $\(bettingManager.currentBet)")
+            .font(.title)
+            .padding()
+        
+        HStack {
+            ForEach([Chips.five, .ten, .twenty, .fifty], id: \.self) { chip in
+                Button(action: {
+                    try? bettingManager.addToBet(chip.rawValue)
+                }) {
+                    Text("$\(chip.rawValue)")
+                        .padding()
+                        .cornerRadius(10)
+                }
+                .disabled(!bettingManager.canBet(chip.rawValue))
+            }
+        }
+        .padding()
+        
+        HStack {
+            CancelButtonView(bettingManager: bettingManager)
+
+            SubmitButtonView(currentBet: bettingManager.currentBet, submitAction: {
+                let submittedBet = bettingManager.submitBet()
+                onSubmit(submittedBet)
+                print("Bet placed: $\(submittedBet)  Coins: $\(bettingManager.coins)")
+            })
+            
+            
+        }
+        .padding()
     }
 }
 
+struct CancelButtonView: View {
+    @ObservedObject var bettingManager: BettingManager
+    
+    var body: some View {
+        Button("Cancel") {
+            bettingManager.cancelBet()
+        }
+        .padding()
+        .cornerRadius(10)
+    }
+}
+
+struct SubmitButtonView: View {
+    let currentBet: Int
+    let submitAction: () -> Void
+    
+    var body: some View {
+        Button("Submit", action: submitAction)
+            .padding()
+            .cornerRadius(10)
+            .disabled(currentBet == 0)
+    }
+}
+
+
 #Preview {
-    BetChipsView(coins: 10)
+    BetChipsView(bettingManager: BettingManager(initialCoins: 100), onSubmit: { _ in })
 }
