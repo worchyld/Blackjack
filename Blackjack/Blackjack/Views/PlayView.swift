@@ -23,11 +23,25 @@ struct PlayView: View {
 }
 
 struct HeaderView: View {
+    let avt = "avatar-1"
     let score: Int = 0
     var body: some View {
-        Text("Score: \(score)")
+        HStack {
+            AvatarView(avt: .avatar1, width: 80)
+            
+            VStack(alignment: .leading) {
+                Text("Score: \(score)")
+                    .font(.subheadline)
+            }
+            
+            Spacer()
+        }
+        .padding()
+        .background(Color.white.opacity(0.2))
+        .padding(.horizontal)
     }
 }
+
 
 struct ButtonView: View {
     let title: String
@@ -46,6 +60,18 @@ struct ButtonView: View {
                     RoundedRectangle(cornerRadius: 10).stroke(Color.white, lineWidth: 5)
                 )
         }
+    }
+}
+
+struct DealerAreaView: View {
+    var body: some View {
+        Text("Dealer area")
+    }
+}
+
+struct PlayerAreaView: View {
+    var body: some View {
+        Text("Player area")
     }
 }
 
