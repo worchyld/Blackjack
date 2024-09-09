@@ -10,7 +10,6 @@
 		4D58452827D87828006B856A /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58452727D87828006B856A /* Hand.swift */; };
 		4D58452A27D87864006B856A /* Ext+CaseIterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58452927D87864006B856A /* Ext+CaseIterable.swift */; };
 		4D58452C27D8787B006B856A /* Ext+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58452B27D8787B006B856A /* Ext+Optional.swift */; };
-		4D5C1DA82A0165C5001D3AD6 /* GameTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5C1DA72A0165C5001D3AD6 /* GameTableView.swift */; };
 		4D5EB63127D022A200D0EF1A /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EB63027D022A200D0EF1A /* CardTests.swift */; };
 		4D5EEC182C8B832700B140E2 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EEC172C8B832700B140E2 /* Player.swift */; };
 		4D5EEC1A2C8B836600B140E2 /* GameError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5EEC192C8B836600B140E2 /* GameError.swift */; };
@@ -47,7 +46,6 @@
 		4D58452727D87828006B856A /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		4D58452927D87864006B856A /* Ext+CaseIterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+CaseIterable.swift"; sourceTree = "<group>"; };
 		4D58452B27D8787B006B856A /* Ext+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Optional.swift"; sourceTree = "<group>"; };
-		4D5C1DA72A0165C5001D3AD6 /* GameTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableView.swift; sourceTree = "<group>"; };
 		4D5EB63027D022A200D0EF1A /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		4D5EEC172C8B832700B140E2 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		4D5EEC192C8B836600B140E2 /* GameError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameError.swift; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				4D61CCBE280FB5FD00EADF0F /* AvatarView.swift */,
-				4D5C1DA72A0165C5001D3AD6 /* GameTableView.swift */,
 				4D5EEC1F2C8B8D7400B140E2 /* PlayView.swift */,
 			);
 			path = Views;
@@ -293,7 +290,6 @@
 				4D5EEC1A2C8B836600B140E2 /* GameError.swift in Sources */,
 				4D79462527CF58870055A9DE /* MainMenuView.swift in Sources */,
 				4D5EEC182C8B832700B140E2 /* Player.swift in Sources */,
-				4D5C1DA82A0165C5001D3AD6 /* GameTableView.swift in Sources */,
 				4D6413C8290C41C4000F8876 /* Colours.swift in Sources */,
 				4D79462327CF58870055A9DE /* BlackjackApp.swift in Sources */,
 				4D58452A27D87864006B856A /* Ext+CaseIterable.swift in Sources */,
