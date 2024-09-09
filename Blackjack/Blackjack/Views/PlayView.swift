@@ -114,6 +114,9 @@ struct PlayerAreaView: View {
 struct FooterView: View {
     var body: some View {
         HStack(spacing: 30, content: {
+            ButtonView(title: "Bet") {
+                print("Bet button tapped")
+            }
             ButtonView(title: "Hit") {
                 print("Hit button tapped")
             }
