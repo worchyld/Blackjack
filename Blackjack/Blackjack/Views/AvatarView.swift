@@ -20,17 +20,32 @@ enum Avatars : String {
 }
 
 struct AvatarView: View {
-    @State var avatar : String = "avatar-1"
+    let avt: Avatars
+    let width: CGFloat
+    let height: CGFloat
+    //let size: CGFloat
+    let constrainProportions: Bool
+    
+    init(avt: Avatars, width: CGFloat = 100, height: CGFloat = 100, constrainProportions: Bool = true) {
+    //init(avt: Avatars, size: CGFloat = 50, constrainProportions: Bool = true) {
+       self.avt = avt
+       //self.size = size
+        self.width = width
+        self.height = height
+       self.constrainProportions = constrainProportions
+    }
     
     var body: some View {
         VStack {
-            Image(avatar)
+            Image(avt.rawValue)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: width, height: constrainProportions ? width : height)
+                .clipShape(Circle())
         }
     }
 }
 
-struct AvatarView_Previews: PreviewProvider {
-    static var previews: some View {
-        AvatarView(avatar: Avatars.avatar1.rawValue)
-    }
+#Preview {
+    AvatarView(avt: .avatar1)
 }
