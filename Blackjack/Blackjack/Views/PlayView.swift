@@ -39,15 +39,7 @@ struct PlayView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.green)
-        /*
-        .background(
-            Image("table")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: UIScreen.main.bounds.width * 1.5, height: UIScreen.main.bounds.height) // Increase size by 50%
-                .clipped()
-        )*/
-        .edgesIgnoringSafeArea(.all) // This ensures the background extends to the edges of the screen
+        .edgesIgnoringSafeArea(.all) // Background extends to the edges of the screen
         .onAppear {
             // The deck is already prepared in the ViewModel's init,
             // so we don't need to do anything here.
