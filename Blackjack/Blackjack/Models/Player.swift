@@ -6,7 +6,7 @@ struct Player {
     var coins: Int
     var bet: Int
     
-    init(name: String, initialCoins: Int) {
+    init(name: String, initialCoins: Int = 20) {
         self.name = name
         self.coins = initialCoins
         self.hand = []

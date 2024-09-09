@@ -39,9 +39,12 @@ class Deck {
 extension Deck : CustomStringConvertible {
     var description: String {
         var output: String = ""
+        /*
         for card in self._cards {
             output.append("Card: \(card.description)\n")
-        }
+        }*/
+        output.append(cards.debugDescription)
+        output.append("Cards: \(cards.count)")
         return output
     }
 }

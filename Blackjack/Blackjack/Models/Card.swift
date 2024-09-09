@@ -58,9 +58,9 @@ extension Card.Rank : CustomStringConvertible {
     }
 }
 
-extension Card : CustomStringConvertible {
-    var description: String {
-        let output = "\(suit.description) \n  suit is \(suit.rawValue)\n"
+extension Card : CustomDebugStringConvertible {
+    var debugDescription: String {
+        let output = "\(suit.description) - suit: \(suit.rawValue), rank: \(rank.rawValue) \n"
         return output
     }
 }
